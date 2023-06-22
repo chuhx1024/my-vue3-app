@@ -6,6 +6,9 @@ import vitePluginEslint from "vite-plugin-eslint"
 
 const postCssPxToRem = require("postcss-pxtorem")
 
+import Components from 'unplugin-vue-components/vite'
+import { VantResolver } from 'unplugin-vue-components/resolvers'
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,6 +16,9 @@ export default defineConfig({
         vue(),
         vitePluginEslint({
             lintOnStart: true, // 启动时候是否就执行eslint校验，如果开启的话有eslint的报错则服务是会启动失败
+        }),
+        Components({
+            resolvers: [VantResolver()],
         }),
     ],
     resolve: {

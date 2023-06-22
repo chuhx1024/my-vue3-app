@@ -77,6 +77,11 @@ yarn add axiox
 ```
 二次封装 utils/request.js
 
+## 引入 Vant 实现按需加载
+官网: https://vant-contrib.gitee.io/vant/#/zh-CN/home
+
+## 使用初始化 yarn add normalize.css -S
+
 
 
 
