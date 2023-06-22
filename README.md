@@ -71,5 +71,12 @@ import 'amfe-flexible'
 5. 测试
 设置宽度 750px  就是整个宽度   因为  rootValue: 75
 
+## 安装 axios
+```
+yarn add axiox 
+```
+二次封装 utils/request.js
+
+
 
 
