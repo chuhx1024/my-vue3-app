@@ -18,3 +18,10 @@ npm init vue@latest
 Eslint Yes 
 Perttier NO 
 ```
+
+## 设置新的 ESlint 规则
+```
+安装  vite-plugin-eslint  eslint 不通过  vite 报错插件
+执行 yarn lint 修复
+设置 .vscode  保存修复eslint格式
+```
