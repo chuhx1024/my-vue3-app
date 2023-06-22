@@ -9,7 +9,7 @@
     <van-button type="danger">危险按钮</van-button>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .about {
         width: 750px;
         background-color: red;

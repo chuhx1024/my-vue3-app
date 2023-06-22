@@ -1,9 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import  LoginLayout from "@/layout/LoginLayout.vue"
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
+        {
+            path: '/login',
+            component: LoginLayout,
+            children: [
+                {
+                    path: '/login',
+                    name: 'Login',
+                    component: () => import(/* webpackChunkName: "login" */ '@/views/login/index.vue'),
+                },
+            ],
+        },
         {
             path: '/',
             name: 'home',
