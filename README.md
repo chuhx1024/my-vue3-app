@@ -38,4 +38,38 @@ Perttier NO
 4. 安装低版本 syltelint 插件  v0.87.6
 5. 之后 就实现了 css 保存是自动格式化
 
+## 添加移动端适配方案
+1. 设置 viewport
+在 index.html 中：
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+```
+2.安装插件
+```js
+npm install amfe-flexible -S
+npm install postcss-pxtorem -D
+```
+3. 配置文件
+```js
+const postCssPxToRem = require("postcss-pxtorem")
+css: {
+    postcss: {
+        plugins: [
+            postCssPxToRem({
+                rootValue: 75, // 1rem的大小
+                propList: ['*'], // 需要转换的属性，这里选择全部都进行转换
+            })
+        ]
+    },
+}
+```
+4. 导入 在 main.js 中引入 amfe-flexible 插件：
+```js
+import 'amfe-flexible'
+```
+5. 测试
+设置宽度 750px  就是整个宽度   因为  rootValue: 75
+
+
 
