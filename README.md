@@ -25,3 +25,17 @@ Perttier NO
 执行 yarn lint 修复
 设置 .vscode  保存修复eslint格式
 ```
+
+## 配置 styleLint 规则
+1. 修改 package.json
+```js
+"stylelint": "^13.13.1",
+"stylelint-config-standard": "^22.0.0",
+"stylelint-scss": "^3.21.0",
+```
+2. 添加 styleLinttrc.js 配置
+3. 设置.vscode/setting.json
+4. 安装低版本 syltelint 插件  v0.87.6
+5. 之后 就实现了 css 保存是自动格式化
+
+
